@@ -1,3 +1,13 @@
+# Các bước thực hiện 
+1. Tạo mới 1 git repository.
+2. Import repository  [https://github.com/dongocquy/create-react-app-auth-amplify-code-mau.git](https://github.com/dongocquy/create-react-app-auth-amplify-code-mau.git)
+3. Tạo mới Amplify `Host web app` từ Github repository tạo ra từ bước 1. Amplify sẽ tự động build và tạo ra `amplify env import`.
+4. Clone github repository tạo ở bước 1 về máy tính và thực hiện install các module theo lệnh `npm install`.
+5. Tạo file `amplify/team-provider.json`.
+6. Thực hiện copy `amplify env import` ở bước 2 theo hướng dẫn của Amplify (phía dưới).
+7. Vào phần Backend trong `Host web app`, tạo ra ở bước 3, tới mục Edit backend copy lệnh pull backend, nội dung tương tự `amplify pull --appId d2hbxels99b6jk --envName master`;
+8. Chỉnh sửa file config Cognito tại `src\aws-export.js` để thay đổi thông tin user pool.
+9. Chạy 'npm start'. Done!
 # Create-react-app with AWS Amplify Auth 
 
 This auth starter implements withAuthenticator HOC to provide a basic authentication flow for signing up signing in users as well as protected client side routing using AWS Amplify. Auth features: User sign up, User sign in, Multi-factor Authentication, User sign-out.
