@@ -6,7 +6,7 @@
 5. Tạo file `amplify/team-provider.json`.
 6. Thực hiện copy `amplify env import` ở bước 2 theo hướng dẫn của Amplify (phía dưới).
 7. Vào phần Backend trong `Host web app`, tạo ra ở bước 3, tới mục Edit backend copy lệnh pull backend, nội dung tương tự `amplify pull --appId d2hbxels99b6jk --envName master`;
-8. Chỉnh sửa file config Cognito tại `src\aws-export.js` để thay đổi thông tin user pool khi cần sử dụng User pool đã có. Xóa bỏ tên file `aws-export.js` trong `.gitignore` để thông tin User pool được đưa lên github khi deploy.
+8. Chuyển đoạn `import aws_exports from './aws-exports'` và `Amplify.configure(aws_exports)` từ App.js sang index.js. Chỉnh sửa file config Cognito tại `src\aws-export.js` để thay đổi thông tin user pool khi cần sử dụng User pool đã có. Xóa bỏ tên file `aws-export.js` trong `.gitignore` để thông tin User pool được đưa lên github khi deploy.
 9. Chạy 'npm start'. Done!
 # Create-react-app with AWS Amplify Auth 
 
